@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 50px;
+        font-size: 36px;
+      }
+      form {
+        margin-top: 50px;
+        display: inline-block;
+        border: 2px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input[type="text"], select {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      #result {
+        margin-top: 50px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      #back {
+        margin-top: 30px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+    <form method="post" action="/">
+      <input type="text" name="num1" placeholder="Enter first number" required>
+      <br>
+      <input type="text" name="num2" placeholder="Enter second number" required>
+      <br>
+      <select name="operation" required>
+        <option value="">Select operation</option>
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="multiply">Multiply</option>
+        <option value="divide">Divide</option>
+      </select>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="result">{{result}}</div>
+    <div id="back"><a href="/">Another calculation</a></div>
+  </body>
+</html>
